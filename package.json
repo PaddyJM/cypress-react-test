@@ -25,7 +25,8 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:cypress/recommended"
     ]
   },
   "browserslist": {
@@ -43,6 +44,7 @@
   "devDependencies": {
     "@cypress/react": "^5.12.4",
     "@cypress/webpack-dev-server": "^1.8.3",
-    "cypress": "^9.5.2"
+    "cypress": "^9.5.2",
+    "eslint-plugin-cypress": "^2.12.1"
   }
 }

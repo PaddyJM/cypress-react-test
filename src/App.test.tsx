@@ -2,7 +2,12 @@ import React from 'react';
 import { mount } from '@cypress/react';
 import App from './App';
 
-it('renders learn react link', () => {
+it('renders "Hello World!" greeting', () => {
   mount(<App />);
   cy.get('a').contains('Hello World!');
 });
+
+it('renders test button', () => {
+  mount(<App />);
+  cy.get('Button').contains('Test Button')
+})
