@@ -4,6 +4,6 @@ jobs:
   Run-Cypress-Tests:
     runs-on: ubuntu-latest
     steps:
-      - run: npm install -g yarn
       - run: yarn
       - run: yarn cypress run-ct
+        uses: ./
