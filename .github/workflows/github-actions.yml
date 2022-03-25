@@ -4,6 +4,12 @@ jobs:
   Run-Cypress-Tests:
     runs-on: ubuntu-latest
     steps:
-      - run: yarn
-      - run: yarn cypress run-ct
-        uses: ./
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm run build
+          start: npm start
