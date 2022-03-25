@@ -4,5 +4,6 @@ jobs:
   Run-Cypress-Tests:
     runs-on: ubuntu-latest
     steps:
+      - run: cd ..
       - run: yarn
       - run: yarn cypress run-ct
