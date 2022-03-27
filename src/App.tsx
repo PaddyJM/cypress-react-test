@@ -19,7 +19,7 @@ function App() {
         >
           Hello World!
         </a>
-        <Button />
+        <Button>Test Button</Button>
       </header>
     </div>
   );
