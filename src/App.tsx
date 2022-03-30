@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Button from "./components/ui-kit/Button"
+import Counter from "./components/Counter"
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         >
           Hello World!
         </a>
-        <Button>Test Button</Button>
+        <Counter />
       </header>
     </div>
   );
