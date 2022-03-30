@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-, "src/components/Button.test.jsx"  ]
+, "src/components/Button.test.jsx", "cypress/integration/App.spec.tsx"  ]
 }
