@@ -14,6 +14,6 @@ it('Button', () => {
         <Link>Test Link</Link>
     </Container>)
     expect(container.firstChild.classList.contains('ui-container')).toBeTruthy()
-    expect(container.firstChild.firstChild.classList.contains('ui-textfield')).toBeTruthy()
+    expect(container.firstChild.firstChild.classList.contains('ui-input')).toBeTruthy()
     expect(container.firstChild.childNodes.length).toBe(3);
 })

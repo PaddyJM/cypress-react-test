@@ -7,6 +7,6 @@ export default function Input(props) {
         inputType = "text";
     }
     const { children, className, ...rest } = props;
-    const classes = clsx('ui-textfield', className)
+    const classes = clsx('ui-input', className)
     return <input className={classes} type={inputType} {...rest} />;
 }
