@@ -7,7 +7,7 @@ it('renders "Hello World!" greeting', () => {
   cy.get('a').contains('Hello World!');
 });
 
-it('renders count button and initial state', () => {
+it('renders count button and initial text', () => {
   mount(<App />);
   cy.contains('0 times clicked')
   cy.get('.ui-button').contains('Add 1')
@@ -16,6 +16,6 @@ it('renders count button and initial state', () => {
 it('renders count button and correct text after being clicked once', () => {
   mount(<App />);
   cy.contains('0 times clicked')
-  cy.get('.ui-button').click()
+  cy.get('.ui-button').contains('Add 1').click()
   cy.contains('1 times clicked')
 })
