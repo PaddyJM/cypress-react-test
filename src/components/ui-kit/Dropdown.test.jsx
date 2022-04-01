@@ -1,27 +1,27 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react"
-import Navbar from './Navbar'
+import Dropdown from './Dropdown'
 
 console.log = jest.fn();
 
 it("renders a dropdown with the correct classes and options", () => {
-    render(<Navbar className="countries">
+    render(<Dropdown className="countries">
         <option>Netherlands</option>
         <option>Belgium</option>
         <option>France</option>
-    </Navbar>)
-    expect(screen.getByRole('combobox').classList.contains('ui-navbar')).toBeTruthy();
+    </Dropdown>)
+    expect(screen.getByRole('combobox').classList.contains('ui-dropdown')).toBeTruthy();
     expect(screen.getByText("Netherlands")).toBeTruthy()
     expect(screen.getByText("Belgium")).toBeTruthy()
     expect(screen.getByText("France")).toBeTruthy()
 })
 
 it("logs the correct message when clicked", () => {
-    render(<Navbar className="countries">
+    render(<Dropdown className="countries">
         <option>Netherlands</option>
         <option>Belgium</option>
         <option>France</option>
-    </Navbar>)
+    </Dropdown>)
 
     const dropdown = screen.getByRole("combobox")
     fireEvent.change(dropdown)
